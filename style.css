@@ -1,1 +1,14 @@
-sdg
+.icon__box {
+  display: flex;
+}
+
+svg {
+  height: 50px;
+  width: 100px;
+  padding: 10px;
+}
+
+svg:hover {
+  fill: rgb(250, 178, 202);
+  transition-duration: 0.3s;
+}
