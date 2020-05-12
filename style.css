@@ -1,3 +1,32 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  min-height: 65px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 10;
+}
+
+.navlist {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin-bottom: 5px;
+}
+
+.nav-link {
+  text-decoration: none;
+  padding: 15px 40px;
+  margin: 0 5px;
+  font-size: 18px;
+  color: #000;
+  border-radius: 7px;
+}
+
+
+
 .icon__box {
   display: flex;
 }
