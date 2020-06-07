@@ -1,0 +1,20 @@
+@mixin flexCenter($direction) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    font-family: 'Norwester';
+    src: url('../fonts/norwester-webfont.woff2') format('woff2'),
+        url('../fonts/norwester-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+$coral: #FC766A;
+$white: #fff;
+$navy: #273859;
