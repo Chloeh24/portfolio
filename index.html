@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&family=Roboto&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./styles/style.css" />
@@ -24,18 +24,21 @@
         Chloe <span class="accent">.</span>
       </h1>
     </section>
-    <section class="about" id="about">
-      <h1>About</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-
+    <section class="container" id="about">
+      <h1 class="heading">About</h1>
+      <hr class="accent" />
+      <div class="profile">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <img src="./img/profile2-1.jpg" alt="profile-image" />
+      </div>
       <h2>Skills</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -44,21 +47,25 @@
       </p>
     </section>
 
-    <section class="project" id="bechdel">
+    <section class="container" id="projects">
+      <h1 class="heading">Projects</h1>
+      <hr class="accent" />
       <img src="" alt="" />
-      <h3>Bechdel Beyond</h3>
-      <p>
-        A community driven app which lets users rate movies based on the bechdel
-        test and gender representation
-      </p>
+      <div class="project">
+        <h3>Bechdel Beyond</h3>
+        <p>
+          A community driven app which lets users rate movies based on the
+          bechdel test and gender representation
+        </p>
+      </div>
+      <div class="project" id="t4b">
+        <img src="" alt="" />
+        <h3>Prepare Me Story Builder</h3>
+        <p>Description of project</p>
+      </div>
     </section>
-    <section class="project" id="t4b">
-      <img src="" alt="" />
-      <h3>Prepare Me Story Builder</h3>
-      <p>Description of project</p>
-    </section>
-    <section class="grid">
-      <h2>Other projects</h2>
+    <section class="container">
+      <h2 class="heading">More projects</h2>
       <p>Micro blogging site</p>
       <p>Pokemon React Game</p>
     </section>
@@ -110,7 +117,6 @@
           </svg>
         </a>
       </div>
-      <p>Made by <a href="https://github.com/Chloeh24">Chloe</a> 2020</p>
     </footer>
   </body>
 </html>

@@ -1,17 +1,14 @@
 @import './variables';
 
 
-
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif
 }
 
-/*Nav bar */
 
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   min-height: 65px;
@@ -31,12 +28,12 @@ nav {
   text-decoration: none;
   padding: 15px 40px;
   margin: 0 5px;
-  font-size: 18px;
+  font-family: $subtitle;
   color: #000;
-  border-radius: 7px;
+  font-size: 1.2rem;
 
   &:hover {
-    background-color: white;
+    color: $coral;
   }
 }
 
@@ -51,8 +48,8 @@ nav {
   background: linear-gradient(90deg, $coral 50%, white 50%);
 
   h1 {
-    font-family: 'Norwester', sans-serif;
-    font-size: 12rem;
+    font-family: $header;
+    font-size: 11rem;
   }
 }
 
@@ -62,25 +59,41 @@ nav {
 }
 
 /*about page */
+.heading {
+  font-family: $header;
+  text-align: center;
+  font-size: 4rem;
+}
 
 
 
-/*projects */
 
-.project {
-  @include flexCenter(column);
+.container {
+  @include margins();
+  font-family: $subtitle;
+
+  .profile {
+    display: flex;
+    padding: 4rem;
+
+    img {
+      width: 20vw;
+      margin-left: 4rem;
+      border-radius: 10px;
+    }
+  }
 }
 
 /*footer icons */
 #contact {
   @include flexCenter(column);
-  height: 4rem;
+  height: 5rem;
   background-color: $navy;
 }
 
 svg {
-  height: 40px;
-  width: 70px;
+  height: 2.5rem;
+  width: 3rem;
   padding: 10px;
   fill: white
 }

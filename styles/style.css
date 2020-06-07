@@ -8,12 +8,10 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: 'Roboto', sans-serif;
 }
 
-/*Nav bar */
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   min-height: 65px;
@@ -42,13 +40,13 @@ nav {
   text-decoration: none;
   padding: 15px 40px;
   margin: 0 5px;
-  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
   color: #000;
-  border-radius: 7px;
+  font-size: 1.2rem;
 }
 
 .nav-link:hover {
-  background-color: white;
+  color: #FC766A;
 }
 
 /*title page */
@@ -72,8 +70,8 @@ nav {
 }
 
 .title h1 {
-  font-family: 'Norwester', sans-serif;
-  font-size: 12rem;
+  font-family: "Norwester", sans-serif;
+  font-size: 11rem;
 }
 
 .accent {
@@ -82,18 +80,31 @@ nav {
 }
 
 /*about page */
-/*projects */
-.project {
-  height: 100vh;
+.heading {
+  font-family: "Norwester", sans-serif;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  min-height: 80vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 4rem;
+}
+
+.container .profile img {
+  width: 20vw;
+  margin-left: 4rem;
+  border-radius: 10px;
 }
 
 /*footer icons */
@@ -108,13 +119,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 4rem;
+  height: 5rem;
   background-color: #273859;
 }
 
 svg {
-  height: 40px;
-  width: 70px;
+  height: 2.5rem;
+  width: 3rem;
   padding: 10px;
   fill: white;
 }
