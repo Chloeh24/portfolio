@@ -6,6 +6,10 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  font-family: $subtitle;
+  line-height: 1.5
+}
 
 nav {
   position: absolute;
@@ -14,7 +18,7 @@ nav {
   min-height: 65px;
   display: flex;
   justify-content: flex-end;
-  z-index: 10;
+  z-index: 5;
 }
 
 .navlist {
@@ -26,7 +30,7 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1rem 2.3rem;
   margin: 0 5px;
   font-family: $subtitle;
   color: #000;
@@ -63,9 +67,10 @@ nav {
 .heading {
   font-family: $header;
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
+  text-shadow: 2px 4px $coral;
+  margin: 2% auto;
 }
-
 
 .container {
   @include margins();
@@ -83,9 +88,78 @@ nav {
   }
 }
 
+.project {
+  @include flexCenter(row);
+  min-height: 60vh;
+
+  img {
+    width: 40vw;
+    margin: 3% 5%;
+  }
+}
+
+
+.project__button-box {
+  margin: 2rem auto;
+}
+
+.project__button {
+  margin: 0 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: $charcoal;
+  font-family: $font
+}
+
+.code {
+  border: 2px solid $turquoise;
+
+  &:hover {
+    background-color: $turquoise;
+    transition-duration: 0.7s;
+  }
+}
+
+.site {
+  border: 2px solid $mint;
+
+  &:hover {
+    background-color: $mint;
+    transition-duration: 0.7s;
+  }
+}
+
+
+.more-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
+  grid-auto-flow: dense;
+  justify-items: center;
+  margin: 2% 5% 5% 5%;
+  grid-gap: 1.5rem;
+}
+
+.project {
+  position: relative;
+  height: 300px;
+  grid-column: span 2;
+}
+
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
 /*footer icons */
 #contact {
-  @include flexCenter(column);
+  @include flexCenter(row);
   height: 5rem;
   background-color: $navy;
 }
@@ -94,10 +168,11 @@ svg {
   height: 2.2rem;
   width: 3rem;
   padding: 10px;
-  fill: white
-}
 
-svg:hover {
-  fill: rgb(246, 178, 178);
-  transition-duration: 0.3s;
+  fill: white;
+
+  &:hover {
+    fill: rgb(246, 178, 178);
+    transition-duration: 0.3s;
+  }
 }

@@ -10,6 +10,11 @@ body {
   scroll-behavior: smooth;
 }
 
+p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
 nav {
   position: absolute;
   top: 0;
@@ -21,7 +26,7 @@ nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  z-index: 10;
+  z-index: 5;
 }
 
 .navlist {
@@ -38,7 +43,7 @@ nav {
 
 .nav-link {
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1rem 2.3rem;
   margin: 0 5px;
   font-family: "Montserrat", sans-serif;
   color: #000;
@@ -51,7 +56,6 @@ nav {
 
 /*title page */
 .title {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,14 +86,16 @@ nav {
 .heading {
   font-family: "Norwester", sans-serif;
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
+  text-shadow: 2px 4px #FC766A;
+  margin: 2% auto;
 }
 
 .container {
   width: 80%;
-  margin: 5% auto 3% auto;
+  margin: 7% auto 5% auto;
   text-align: left;
-  min-height: 80vh;
+  min-height: 60vh;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -106,9 +112,85 @@ nav {
   border-radius: 10px;
 }
 
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 60vh;
+}
+
+.project img {
+  width: 40vw;
+  margin: 3% 5%;
+}
+
+.project__button-box {
+  margin: 2rem auto;
+}
+
+.project__button {
+  margin: 0 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #424651;
+  font-family: "Roboto", sans-serif;
+}
+
+.code {
+  border: 2px solid #80FFE8;
+}
+
+.code:hover {
+  background-color: #80FFE8;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.site {
+  border: 2px solid #D7EBBA;
+}
+
+.site:hover {
+  background-color: #D7EBBA;
+  -webkit-transition-duration: 0.7s;
+          transition-duration: 0.7s;
+}
+
+.more-projects-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-rows: (minmax(160px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
+  grid-auto-flow: dense;
+  justify-items: center;
+  margin: 2% 5% 5% 5%;
+  grid-gap: 1.5rem;
+}
+
+.project {
+  position: relative;
+  height: 300px;
+  grid-column: span 2;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /*footer icons */
 #contact {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

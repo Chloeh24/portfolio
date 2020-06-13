@@ -8,7 +8,6 @@
 }
 
 @mixin flexCenter($direction) {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,10 +17,9 @@
     width: 80%;
     margin: 7% auto 5% auto;
     text-align: left;
-    min-height: 80vh;
+    min-height: 60vh;
 
 }
-
 
 $header: 'Norwester',
 sans-serif;
@@ -29,6 +27,13 @@ $subtitle: 'Montserrat',
 sans-serif;
 $font: 'Roboto',
 sans-serif;
+
 $coral: #FC766A;
 $white: #fff;
 $navy: #273859;
+$charcoal: #424651;
+$turquoise: #80FFE8;
+
+$lemon: #FEFFBE;
+$cream: #FBE8D3;
+$mint: #D7EBBA;
