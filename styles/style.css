@@ -6,11 +6,8 @@
 }
 
 body {
-  margin: 0;
   scroll-behavior: smooth;
-}
-
-p {
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
@@ -54,7 +51,6 @@ nav {
   color: #FC766A;
 }
 
-/*title page */
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,27 +88,26 @@ nav {
 }
 
 .container {
-  width: 80%;
-  margin: 7% auto 5% auto;
+  margin: 0 auto;
+  padding: 7% 10%;
   text-align: left;
   min-height: 60vh;
-  font-family: "Montserrat", sans-serif;
 }
 
 .container .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 4rem;
+  padding: 4rem 0;
 }
 
 .container .profile img {
-  width: 20vw;
+  width: 30vw;
   margin-left: 4rem;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
-.project {
+.container .project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,16 +120,16 @@ nav {
   min-height: 60vh;
 }
 
-.project img {
+.container .project img {
   width: 40vw;
   margin: 3% 5%;
 }
 
-.project__button-box {
+.container .project .project__button-box {
   margin: 2rem auto;
 }
 
-.project__button {
+.container .project .project__button-box .project__button {
   margin: 0 1rem;
   padding: 0.6rem 1rem;
   border-radius: 6px;
@@ -143,24 +138,28 @@ nav {
   font-family: "Roboto", sans-serif;
 }
 
-.code {
+.container .project .project__button-box .code {
   border: 2px solid #80FFE8;
 }
 
-.code:hover {
+.container .project .project__button-box .code:hover {
   background-color: #80FFE8;
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
 }
 
-.site {
+.container .project .project__button-box .site {
   border: 2px solid #D7EBBA;
 }
 
-.site:hover {
+.container .project .project__button-box .site:hover {
   background-color: #D7EBBA;
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
+}
+
+#about {
+  background-color: #fff4e7;
 }
 
 .more-projects-grid {
@@ -176,7 +175,7 @@ nav {
   grid-gap: 1.5rem;
 }
 
-.project {
+.more-projects-grid .project {
   position: relative;
   height: 300px;
   grid-column: span 2;
@@ -189,7 +188,6 @@ nav {
      object-fit: cover;
 }
 
-/*footer icons */
 #contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,14 +202,14 @@ nav {
   background-color: #273859;
 }
 
-svg {
+#contact svg {
   height: 2.2rem;
   width: 3rem;
   padding: 10px;
   fill: white;
 }
 
-svg:hover {
+#contact svg:hover {
   fill: #f6b2b2;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;

@@ -2,14 +2,13 @@
 
 
 body {
-  margin: 0;
   scroll-behavior: smooth;
-}
-
-p {
+  margin: 0;
   font-family: $subtitle;
   line-height: 1.5
 }
+
+// nav bar
 
 nav {
   position: absolute;
@@ -41,10 +40,10 @@ nav {
   }
 }
 
-/*title page */
+// title page
 
 .title {
-  @include flexCenter(row);
+  @include flexCenter();
   position: relative;
   margin: 0;
   background-size: cover;
@@ -62,7 +61,7 @@ nav {
   }
 }
 
-
+// about and project sections
 
 .heading {
   font-family: $header;
@@ -74,62 +73,66 @@ nav {
 
 .container {
   @include margins();
-  font-family: $subtitle;
 
   .profile {
     display: flex;
-    padding: 4rem;
+    padding: 4rem 0;
 
     img {
-      width: 20vw;
+      width: 30vw;
       margin-left: 4rem;
-      border-radius: 10px;
+      border-radius: 50%;
+    }
+  }
+
+  .project {
+    @include flexCenter();
+    min-height: 60vh;
+
+    img {
+      width: 40vw;
+      margin: 3% 5%;
+    }
+
+    .project__button-box {
+      margin: 2rem auto;
+
+      .project__button {
+        margin: 0 1rem;
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        color: $charcoal;
+        font-family: $font
+      }
+
+      .code {
+        border: 2px solid $turquoise;
+
+        &:hover {
+          background-color: $turquoise;
+          transition-duration: 0.7s;
+        }
+      }
+
+      .site {
+        border: 2px solid $mint;
+
+        &:hover {
+          background-color: $mint;
+          transition-duration: 0.7s;
+        }
+      }
     }
   }
 }
 
-.project {
-  @include flexCenter(row);
-  min-height: 60vh;
-
-  img {
-    width: 40vw;
-    margin: 3% 5%;
-  }
+#about {
+  background-color: $cream;
 }
 
 
-.project__button-box {
-  margin: 2rem auto;
-}
-
-.project__button {
-  margin: 0 1rem;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  color: $charcoal;
-  font-family: $font
-}
-
-.code {
-  border: 2px solid $turquoise;
-
-  &:hover {
-    background-color: $turquoise;
-    transition-duration: 0.7s;
-  }
-}
-
-.site {
-  border: 2px solid $mint;
-
-  &:hover {
-    background-color: $mint;
-    transition-duration: 0.7s;
-  }
-}
-
+//more projects
 
 .more-projects-grid {
   display: grid;
@@ -139,14 +142,13 @@ nav {
   justify-items: center;
   margin: 2% 5% 5% 5%;
   grid-gap: 1.5rem;
-}
 
-.project {
-  position: relative;
-  height: 300px;
-  grid-column: span 2;
+  .project {
+    position: relative;
+    height: 300px;
+    grid-column: span 2;
+  }
 }
-
 
 .project-image img {
   width: 100%;
@@ -157,22 +159,23 @@ nav {
 
 
 
-/*footer icons */
+// footer
+
 #contact {
-  @include flexCenter(row);
+  @include flexCenter();
   height: 5rem;
   background-color: $navy;
-}
 
-svg {
-  height: 2.2rem;
-  width: 3rem;
-  padding: 10px;
+  svg {
+    height: 2.2rem;
+    width: 3rem;
+    padding: 10px;
+    fill: white;
 
-  fill: white;
-
-  &:hover {
-    fill: rgb(246, 178, 178);
-    transition-duration: 0.3s;
+    &:hover {
+      fill: rgb(246, 178, 178);
+      transition-duration: 0.3s;
+    }
   }
+
 }

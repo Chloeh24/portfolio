@@ -7,18 +7,17 @@
 
 }
 
-@mixin flexCenter($direction) {
+@mixin flexCenter() {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 @mixin margins() {
-    width: 80%;
-    margin: 7% auto 5% auto;
+    margin: 0 auto;
+    padding: 7% 10%;
     text-align: left;
     min-height: 60vh;
-
 }
 
 $header: 'Norwester',
@@ -29,11 +28,10 @@ $font: 'Roboto',
 sans-serif;
 
 $coral: #FC766A;
-$white: #fff;
 $navy: #273859;
 $charcoal: #424651;
 $turquoise: #80FFE8;
 
 $lemon: #FEFFBE;
-$cream: #FBE8D3;
+$cream: #fff4e7;
 $mint: #D7EBBA;
