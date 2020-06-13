@@ -50,22 +50,21 @@ nav {
   h1 {
     font-family: $header;
     font-size: 11rem;
+    text-align: justify;
+  }
+
+  .accent {
+    color: $coral;
   }
 }
 
-.accent {
-  color: $coral;
-  float: clear;
-}
 
-/*about page */
+
 .heading {
   font-family: $header;
   text-align: center;
   font-size: 4rem;
 }
-
-
 
 
 .container {
@@ -92,7 +91,7 @@ nav {
 }
 
 svg {
-  height: 2.5rem;
+  height: 2.2rem;
   width: 3rem;
   padding: 10px;
   fill: white

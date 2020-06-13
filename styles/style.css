@@ -72,14 +72,13 @@ nav {
 .title h1 {
   font-family: "Norwester", sans-serif;
   font-size: 11rem;
+  text-align: justify;
 }
 
-.accent {
+.title .accent {
   color: #FC766A;
-  float: clear;
 }
 
-/*about page */
 .heading {
   font-family: "Norwester", sans-serif;
   text-align: center;
@@ -88,7 +87,7 @@ nav {
 
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 5% auto 3% auto;
   text-align: left;
   min-height: 80vh;
   font-family: "Montserrat", sans-serif;
@@ -124,7 +123,7 @@ nav {
 }
 
 svg {
-  height: 2.5rem;
+  height: 2.2rem;
   width: 3rem;
   padding: 10px;
   fill: white;
