@@ -1,12 +1,14 @@
-@import './variables';
+@import "./variables";
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  scroll-behavior: smooth;
   margin: 0;
   font-family: $subtitle;
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 // nav bar
@@ -19,27 +21,69 @@ nav {
   display: flex;
   justify-content: flex-end;
   z-index: 5;
+
+  .navlist {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin-bottom: 5px;
+  }
 }
 
-.navlist {
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  margin-bottom: 5px;
-}
-
-.nav-link {
+.navlist__link {
+  position: relative;
   text-decoration: none;
   padding: 1rem 2.3rem;
   margin: 0 5px;
   font-family: $subtitle;
-  color: #000;
+  color: $charcoal;
   font-size: 1.2rem;
 
-  &:hover {
-    color: $coral;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $coral;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  &:before {
+    opacity: 0;
+    transform: translateY(- $distance);
+    transition: transform 0s $easeOutBack, opacity 0s;
+  }
+
+  &:after {
+    opacity: 0;
+    transform: translateY($distance/2);
+    transition: transform $duration $easeOutBack, opacity $duration;
+  }
+
+  &:hover,
+  &:focus {
+
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &:before {
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+
+    &:after {
+      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
   }
 }
+
+
 
 // title page
 
@@ -64,16 +108,17 @@ nav {
 
 // about and project sections
 
-.heading {
-  font-family: $header;
-  text-align: center;
-  font-size: 6rem;
-  text-shadow: 3px 4px $coral;
-  margin: 2% auto;
-}
 
 .container {
   @include margins();
+
+  .heading {
+    font-family: $header;
+    text-align: center;
+    font-size: 6rem;
+    text-shadow: 3px 4px $coral;
+    margin: 3% auto 1% auto;
+  }
 
   &#about {
     background-color: $cream;
@@ -83,10 +128,9 @@ nav {
     @include flexCenter(row);
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.7
+      font-size: 1.2rem;
+      line-height: 1.7;
     }
-
 
     img {
       width: 25vw;
@@ -115,7 +159,7 @@ nav {
     }
 
     .project__button-box {
-      margin: 2rem auto;
+      margin: 4rem auto;
 
       .project__button {
         margin: 0 1rem;
@@ -123,7 +167,7 @@ nav {
         border-radius: 6px;
         text-decoration: none;
         color: $charcoal;
-        font-family: $font
+        font-family: $font;
       }
 
       .code {
@@ -139,33 +183,26 @@ nav {
         background-color: $mint;
         border: 2px solid $mint;
 
-
         &:hover {
           background-color: white;
           // border: 2px solid $coral;
-
-
         }
       }
     }
-
-
   }
 
-  &.left {
+  &.coral {
     background-color: $coral;
     color: white;
 
-    .project {
-      .project__image {
-        margin-left: 4%;
+    .left {
+      .project__description {
+        margin-left: 2.5rem;
       }
 
       img {
         margin: 3% 3%;
       }
-
-
 
       .code {
         border: 2px solid $lemon;
@@ -183,15 +220,9 @@ nav {
           color: white;
         }
       }
-
     }
   }
 }
-
-
-
-
-
 
 // footer
 
@@ -211,7 +242,6 @@ nav {
       fill: rgb(246, 178, 178);
       transition-duration: 0.3s;
     }
-
   }
 
   p {
@@ -223,9 +253,11 @@ nav {
 //media
 
 @media only screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 9rem
+  }
 
   .container {
-
     .project {
       @include flexCenter(column-reverse);
       text-align: center;
@@ -239,18 +271,54 @@ nav {
         width: 30vw;
       }
 
-      &.left {
-        @include flexCenter(column)
+      &.coral {
+        @include flexCenter(column);
       }
     }
 
-
-
     .profile {
+      // @include flexCenter(column-reverse);
       min-height: 60vh;
+      flex-wrap: wrap;
 
-      img {}
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    font-size: 13px;
+  }
+
+  nav {
+    .navlist {
+      flex-direction: column;
+    }
+  }
+
+  .navlist__link {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  .title h1 {
+    font-size: 5rem
+  }
+
+
+
+  .container {
+    min-height: 80vh;
+
+    .heading {
+      font-size: 3.5rem;
     }
 
+    .profile p {
+      font-size: 14px;
+    }
   }
 }
