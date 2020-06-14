@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   line-height: 1.5;
+  font-size: 16px;
 }
 
 nav {
@@ -61,6 +62,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 80vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -86,28 +88,47 @@ nav {
 .heading {
   font-family: "Norwester", sans-serif;
   text-align: center;
-  font-size: 5rem;
-  text-shadow: 2px 4px #FC766A;
+  font-size: 6rem;
+  text-shadow: 3px 4px #FC766A;
   margin: 2% auto;
 }
 
 .container {
   margin: 0 auto;
-  padding: 7% 10%;
+  padding: 4% 10%;
   text-align: left;
   min-height: 60vh;
+}
+
+.container#about {
+  background-color: #fff4e7;
 }
 
 .container .profile {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 4rem 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 80vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .profile p {
+  font-size: 1.1rem;
+  line-height: 1.7;
 }
 
 .container .profile img {
-  width: 30vw;
-  margin-left: 4rem;
+  width: 25vw;
+  margin-left: 6rem;
   border-radius: 50%;
 }
 
@@ -121,16 +142,31 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 80vh;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-height: 60vh;
 }
 
-.container .project img {
+.container .project h3 {
+  font-size: 1.5rem;
+}
+
+.container .project .project__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 40vw;
   margin: 3% 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .project .project__image--two {
+  width: 17vw;
+  margin: 0;
 }
 
 .container .project .project__button-box {
@@ -164,12 +200,31 @@ nav {
   background-color: white;
 }
 
-#about {
-  background-color: #fff4e7;
+.container.left {
+  background-color: #FC766A;
+  color: white;
 }
 
-#prepare {
-  background-color: #424651;
+.container.left .project .project__image {
+  margin-left: 4%;
+}
+
+.container.left .project img {
+  margin: 3% 3%;
+}
+
+.container.left .project .code {
+  border: 2px solid #f9fac6;
+  background-color: #f9fac6;
+}
+
+.container.left .project .code:hover {
+  background-color: #FC766A;
+  color: white;
+}
+
+.container.left .project .site:hover {
+  background-color: #FC766A;
   color: white;
 }
 
@@ -183,6 +238,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 80vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -208,5 +264,51 @@ nav {
 #contact p {
   margin: 0 auto;
   color: white;
+}
+
+@media only screen and (max-width: 800px) {
+  .container .project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 80vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    text-align: center;
+    min-height: 70vh;
+  }
+  .container .project .project__image {
+    width: 60vw;
+  }
+  .container .project .project__image--two {
+    width: 30vw;
+  }
+  .container .project.left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 80vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .profile {
+    min-height: 60vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

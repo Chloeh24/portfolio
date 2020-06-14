@@ -11,12 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
     flex-direction: $direction;
 }
 
 @mixin margins() {
     margin: 0 auto;
-    padding: 7% 10%;
+    padding: 4% 10%;
     text-align: left;
     min-height: 60vh;
 }
