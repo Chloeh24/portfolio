@@ -7,10 +7,11 @@
 
 }
 
-@mixin flexCenter() {
+@mixin flexCenter($direction) {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: $direction;
 }
 
 @mixin margins() {
@@ -30,8 +31,8 @@ sans-serif;
 $coral: #FC766A;
 $navy: #273859;
 $charcoal: #424651;
-$turquoise: #80FFE8;
-
-$lemon: #FEFFBE;
-$cream: #fff4e7;
 $mint: #D7EBBA;
+
+$turquoise: #80FFE8;
+$lemon: #f9fac6;
+$cream: #fff4e7;

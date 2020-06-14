@@ -43,7 +43,7 @@ nav {
 // title page
 
 .title {
-  @include flexCenter();
+  @include flexCenter(row);
   position: relative;
   margin: 0;
   background-size: cover;
@@ -86,7 +86,7 @@ nav {
   }
 
   .project {
-    @include flexCenter();
+    @include flexCenter(row);
     min-height: 60vh;
 
     img {
@@ -99,7 +99,7 @@ nav {
 
       .project__button {
         margin: 0 1rem;
-        padding: 0.6rem 1rem;
+        padding: 0.9rem 1.3rem;
         border-radius: 6px;
         text-decoration: none;
         color: $charcoal;
@@ -107,20 +107,24 @@ nav {
       }
 
       .code {
-        border: 2px solid $turquoise;
+        border: 2px solid $coral;
+        background-color: $coral;
 
         &:hover {
-          background-color: $turquoise;
-          transition-duration: 0.7s;
+          background-color: white;
         }
       }
 
       .site {
+        background-color: $mint;
         border: 2px solid $mint;
 
+
         &:hover {
-          background-color: $mint;
-          transition-duration: 0.7s;
+          background-color: white;
+          // border: 2px solid $coral;
+
+
         }
       }
     }
@@ -132,29 +136,36 @@ nav {
 }
 
 
+#prepare {
+  background-color: $charcoal;
+  color: white;
+}
+
 //more projects
 
-.more-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
-  grid-auto-flow: dense;
-  justify-items: center;
-  margin: 2% 5% 5% 5%;
-  grid-gap: 1.5rem;
+// .more-projects-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//   grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
+//   grid-auto-flow: dense;
+//   justify-items: center;
+//   margin: 2% 5% 5% 5%;
+//   grid-gap: 1.5rem;
 
-  .project {
-    position: relative;
-    height: 300px;
-    grid-column: span 2;
-  }
-}
+//   .project {
+//     position: relative;
+//     height: 300px;
+//     grid-column: span 2;
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+//     .project__image {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+//   }
+// }
+
+
 
 
 
@@ -162,9 +173,10 @@ nav {
 // footer
 
 #contact {
-  @include flexCenter();
-  height: 5rem;
+  @include flexCenter(column);
+  min-height: 6rem;
   background-color: $navy;
+  padding: 0.7rem;
 
   svg {
     height: 2.2rem;
@@ -176,6 +188,11 @@ nav {
       fill: rgb(246, 178, 178);
       transition-duration: 0.3s;
     }
+
   }
 
+  p {
+    margin: 0 auto;
+    color: white;
+  }
 }

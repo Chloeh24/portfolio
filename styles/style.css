@@ -61,6 +61,10 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
   margin: 0;
   background-size: cover;
@@ -117,6 +121,10 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   min-height: 60vh;
 }
 
@@ -131,7 +139,7 @@ nav {
 
 .container .project .project__button-box .project__button {
   margin: 0 1rem;
-  padding: 0.6rem 1rem;
+  padding: 0.9rem 1.3rem;
   border-radius: 6px;
   text-decoration: none;
   color: #424651;
@@ -139,53 +147,30 @@ nav {
 }
 
 .container .project .project__button-box .code {
-  border: 2px solid #80FFE8;
+  border: 2px solid #FC766A;
+  background-color: #FC766A;
 }
 
 .container .project .project__button-box .code:hover {
-  background-color: #80FFE8;
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  background-color: white;
 }
 
 .container .project .project__button-box .site {
+  background-color: #D7EBBA;
   border: 2px solid #D7EBBA;
 }
 
 .container .project .project__button-box .site:hover {
-  background-color: #D7EBBA;
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  background-color: white;
 }
 
 #about {
   background-color: #fff4e7;
 }
 
-.more-projects-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  -ms-grid-rows: (minmax(160px, 1fr))[auto-fit];
-      grid-template-rows: repeat(auto-fit, minmax(160px, 1fr));
-  grid-auto-flow: dense;
-  justify-items: center;
-  margin: 2% 5% 5% 5%;
-  grid-gap: 1.5rem;
-}
-
-.more-projects-grid .project {
-  position: relative;
-  height: 300px;
-  grid-column: span 2;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+#prepare {
+  background-color: #424651;
+  color: white;
 }
 
 #contact {
@@ -198,8 +183,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 6rem;
   background-color: #273859;
+  padding: 0.7rem;
 }
 
 #contact svg {
@@ -213,5 +203,10 @@ nav {
   fill: #f6b2b2;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+}
+
+#contact p {
+  margin: 0 auto;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
