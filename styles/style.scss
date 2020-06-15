@@ -115,8 +115,8 @@ nav {
   .heading {
     font-family: $header;
     text-align: center;
-    font-size: 6rem;
-    text-shadow: 3px 4px $coral;
+    font-size: 7rem;
+    text-shadow: 4px 5px $coral;
     margin: 3% auto 1% auto;
   }
 
@@ -258,10 +258,19 @@ nav {
   }
 
   .container {
+    .heading {
+      font-size: 6rem;
+    }
+
     .project {
       @include flexCenter(column-reverse);
       text-align: center;
       min-height: 70vh;
+
+      .project__description p {
+        text-align: justify;
+
+      }
 
       .project__image {
         width: 60vw;
@@ -269,10 +278,6 @@ nav {
 
       .project__image--two {
         width: 30vw;
-      }
-
-      &.coral {
-        @include flexCenter(column);
       }
     }
 
@@ -282,13 +287,32 @@ nav {
       flex-wrap: wrap;
 
       img {
-        margin: 0 auto;
+        margin: 2rem auto;
+      }
+    }
+
+    &.coral {
+
+      .left {
+        @include flexCenter(column);
+
+        .project__description {
+          margin: 0;
+
+          p {
+            text-align: justify;
+
+          }
+        }
       }
     }
   }
+
+
 }
 
-@media only screen and (max-width: 400px) {
+
+@media only screen and (max-width: 415px) {
   body {
     font-size: 13px;
   }
@@ -309,7 +333,6 @@ nav {
   }
 
 
-
   .container {
     min-height: 80vh;
 
@@ -319,6 +342,12 @@ nav {
 
     .profile p {
       font-size: 14px;
+    }
+
+    .project {
+      .project__image {
+        margin-top: 2rem;
+      }
     }
   }
 }

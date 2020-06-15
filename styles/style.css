@@ -147,8 +147,8 @@ nav .navlist {
 .container .heading {
   font-family: "Norwester", sans-serif;
   text-align: center;
-  font-size: 6rem;
-  text-shadow: 3px 4px #FC766A;
+  font-size: 7rem;
+  text-shadow: 4px 5px #FC766A;
   margin: 3% auto 1% auto;
 }
 
@@ -322,6 +322,9 @@ nav .navlist {
   .title h1 {
     font-size: 9rem;
   }
+  .container .heading {
+    font-size: 6rem;
+  }
   .container .project {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -340,13 +343,24 @@ nav .navlist {
     text-align: center;
     min-height: 70vh;
   }
+  .container .project .project__description p {
+    text-align: justify;
+  }
   .container .project .project__image {
     width: 60vw;
   }
   .container .project .project__image--two {
     width: 30vw;
   }
-  .container .project.coral {
+  .container .profile {
+    min-height: 60vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .profile img {
+    margin: 2rem auto;
+  }
+  .container.coral .left {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -362,17 +376,15 @@ nav .navlist {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container .profile {
-    min-height: 60vh;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .container.coral .left .project__description {
+    margin: 0;
   }
-  .container .profile img {
-    margin: 0 auto;
+  .container.coral .left .project__description p {
+    text-align: justify;
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 415px) {
   body {
     font-size: 13px;
   }
@@ -397,6 +409,9 @@ nav .navlist {
   }
   .container .profile p {
     font-size: 14px;
+  }
+  .container .project .project__image {
+    margin-top: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
