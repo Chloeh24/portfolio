@@ -66,8 +66,8 @@ nav .navlist {
 
 .navlist__link:before {
   opacity: 0;
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
   -webkit-transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: opacity 0s, -webkit-transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s;
@@ -76,8 +76,8 @@ nav .navlist {
 
 .navlist__link:after {
   opacity: 0;
-  -webkit-transform: translateY(2.5px);
-          transform: translateY(2.5px);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
   -webkit-transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: opacity 0.2s, -webkit-transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
@@ -388,15 +388,43 @@ nav .navlist {
   body {
     font-size: 13px;
   }
-  nav .navlist {
+  nav {
+    right: 1rem;
+    top: 1rem;
+    width: 50px;
+    z-index: 10;
+    background-image: url("/img/open-menu.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  nav:hover .navlist,
+  nav :active .navlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 80vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  nav .navlist {
+    margin: 0;
+    display: none;
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
   .navlist__link {
-    font-size: 14px;
-    margin-top: 20px;
+    font-size: 20px;
   }
   .title h1 {
     font-size: 5rem;
@@ -412,6 +440,12 @@ nav .navlist {
   }
   .container .project .project__image {
     margin-top: 2rem;
+  }
+  .container .project .project__button-box {
+    margin: 3rem auto;
+  }
+  .container .project .project__button-box .project__button {
+    padding: 0.5rem 0.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
