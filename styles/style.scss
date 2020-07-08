@@ -97,7 +97,7 @@ nav {
 
   h1 {
     font-family: $header;
-    font-size: 11rem;
+    font-size: 10rem;
     text-align: justify;
   }
 
@@ -128,7 +128,7 @@ nav {
     @include flexCenter(row);
 
     p {
-      font-size: 1.2rem;
+
       line-height: 1.7;
     }
 
