@@ -41,7 +41,7 @@ nav {
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 2px;
     left: 0;
@@ -54,7 +54,7 @@ nav {
 
   &:before {
     opacity: 0;
-    transform: translateY(- $distance);
+    transform: translateY(-$distance);
     transition: transform 0s $easeOutBack, opacity 0s;
   }
 
@@ -83,8 +83,6 @@ nav {
   }
 }
 
-
-
 // title page
 
 .title {
@@ -108,7 +106,6 @@ nav {
 
 // about and project sections
 
-
 .container {
   @include margins();
 
@@ -128,7 +125,6 @@ nav {
     @include flexCenter(row);
 
     p {
-
       line-height: 1.7;
     }
 
@@ -254,7 +250,7 @@ nav {
 
 @media only screen and (max-width: 800px) {
   .title h1 {
-    font-size: 9rem
+    font-size: 9rem;
   }
 
   .container {
@@ -269,7 +265,6 @@ nav {
 
       .project__description p {
         text-align: justify;
-
       }
 
       .project__image {
@@ -292,7 +287,6 @@ nav {
     }
 
     &.coral {
-
       .left {
         @include flexCenter(column);
 
@@ -301,18 +295,14 @@ nav {
 
           p {
             text-align: justify;
-
           }
         }
       }
     }
   }
-
-
 }
 
-
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 415px) and (hover: none) {
   body {
     font-size: 13px;
   }
@@ -322,35 +312,38 @@ nav {
     top: 1rem;
     width: 50px;
     z-index: 10;
-    background-image: url('/img/open-menu.svg');
+    // position: fixed;
+    background-image: url("/img/open-menu.svg");
     background-size: contain;
     background-repeat: no-repeat;
 
     &:hover .navlist,
     :active .navlist {
       @include flexCenter(column);
+      min-height: 15vh;
     }
-
 
     .navlist {
       margin: 0;
       display: none;
       position: absolute;
+      top: 2rem;
       text-align: center;
-      height: 100%;
-      width: 100vw;
+      width: 20vw;
       background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 2px 2px 5px grey;
+      border-radius: 5px;
     }
   }
 
   .navlist__link {
-    font-size: 20px;
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   .title h1 {
-    font-size: 5rem
+    font-size: 5rem;
   }
-
 
   .container {
     min-height: 80vh;
@@ -376,6 +369,5 @@ nav {
         }
       }
     }
-
   }
 }
