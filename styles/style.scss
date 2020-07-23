@@ -182,7 +182,6 @@ nav {
 
         &:hover {
           background-color: white;
-          // border: 2px solid $coral;
         }
       }
     }
@@ -278,7 +277,6 @@ nav {
     }
 
     .profile {
-      // @include flexCenter(column-reverse);
       min-height: 60vh;
       flex-wrap: wrap;
 
@@ -313,7 +311,6 @@ nav {
     top: 1rem;
     width: 50px;
     z-index: 10;
-    // position: fixed;
     background-image: url("/img/open-menu.svg");
     background-size: contain;
     background-repeat: no-repeat;
