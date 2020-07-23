@@ -317,7 +317,7 @@ nav .navlist {
   color: white;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .title h1 {
     font-size: 9rem;
   }

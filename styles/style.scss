@@ -156,6 +156,7 @@ nav {
 
     .project__button-box {
       margin: 4rem auto;
+      // display: block;
 
       .project__button {
         margin: 0 1rem;
@@ -248,7 +249,7 @@ nav {
 
 //media
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .title h1 {
     font-size: 9rem;
   }
